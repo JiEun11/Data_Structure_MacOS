@@ -1,4 +1,4 @@
-package com.javaex.mysql.javapractice.collection;
+package javaex.mysql.javapractice.collection;
 
 import java.util.HashSet;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-package com.javaex.mysql.javapractice.collection;
+package javaex.mysql.javapractice.collection;
 
 public class Product {
 
