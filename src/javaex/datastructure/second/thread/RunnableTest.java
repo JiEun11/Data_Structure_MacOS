@@ -1,34 +1,33 @@
 package javaex.datastructure.second.thread;
 
-import sun.java2d.loops.TransformHelper;
+import static java.lang.Thread.sleep;
 
-public class ThreadTest extends Thread{
-
+public class RunnableTest implements Runnable{
     private int []arr;
 
-    public ThreadTest(){
+    public RunnableTest(){
         arr = new int[4];
 
-        for(int i=0 ; i<arr.length; i++){
+        for(int i=0; i<arr.length; i++){
             arr[i] = i;
         }
     }
 
-    public void run(){
+    @Override
+    public void run() {
         for(int i=0; i<arr.length; i++){
             try {
                 sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(arr[i]);
-            System.out.println(currentThread() + " " + arr[i]);
+            System.out.println(Thread.currentThread()+" "+arr[i]);
         }
     }
 
     public static void main(String[] args) {
-        ThreadTest tt = new ThreadTest();
-        tt.start();
+        RunnableTest rt = new RunnableTest();
+        Thread th = new Thread(rt);
+        th.start();
     }
-
 }
