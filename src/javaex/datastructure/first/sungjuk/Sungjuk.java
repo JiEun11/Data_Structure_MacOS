@@ -70,8 +70,9 @@ class Student {
         return total = kor + eng + math;
     }
 
+
     public float getAvg() {
-        return avg = getTotal() / 3.f;
+        return avg = getTotal() / 3.2f;
     }
 
     public String toString() {
@@ -109,6 +110,9 @@ public class Sungjuk {
             stu[i].setEng(sc.nextInt());  //영어 점수 입력
             System.out.print("수학 점수를 입력하세요: ");
             stu[i].setMath(sc.nextInt()); //수학 점수 입력
+
+            stu[i].getTotal();
+            stu[i].getAvg();
 
 //            Student stu = new Student(name, kor, eng, math); // 다 넣어주고 객체 생성
         }
