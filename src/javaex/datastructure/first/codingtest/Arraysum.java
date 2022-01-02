@@ -16,7 +16,6 @@ public class Arraysum {
             arr[i] = sc.nextInt();
         }
     }
-
     public static void main(String[] args) {
         System.out.println("배열 두 개의 길이를 입력하세요.");
         Scanner sc = new Scanner(System.in);
@@ -28,7 +27,6 @@ public class Arraysum {
         as2.input();
         Arraysum as3 = new Arraysum(as1.arr.length+as2.arr.length);
         System.out.println(as3.arr.length);
-
     }
 }
 
