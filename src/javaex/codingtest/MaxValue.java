@@ -6,7 +6,7 @@ import java.util.Comparator;
 public class MaxValue {
 
     public static void main(String[] args) {
-        int[] numbers = {6, 10, 2};
+        int[] numbers = {0, 0, 0};
         Solution sol = new Solution();
         String maxvalue = sol.solution(numbers);
         System.out.println(maxvalue);
@@ -29,6 +29,10 @@ class Solution {
                 return (s2+s1).compareTo(s1+s2);
             }
         });
+
+        // 0값으로만 이루어진 배열일 경우 ex) {0,0,0} 뭐 이런 경우
+        // 000이면 0으로 되게끔
+        if(intToString[0].equals("0")) return "0";
 
         // array를 string으로 합치기
 //        String answer = String.join("", intToString);
